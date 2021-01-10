@@ -1,0 +1,1 @@
+document.write('javascript를 사용하는 기초적인 문법을 배우는 중 입니다.')

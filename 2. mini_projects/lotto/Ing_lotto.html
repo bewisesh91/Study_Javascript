@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 로또 번호 추첨기 </title>
+</head>
+<body>
+    <h1> 로또 번호 추첨기 </h1>
+    <script>
+        // Math.random()
+        // 0 이상~1 미만의 실수(float) 출력
+        // var num = parseInt(Math.random() * 45 + 1);
+        // document.write(num);
+
+        // 배열(Array) 사용해보기
+        // var ex_array = [1, 2, 3, 4, 5, 6];
+        // document.write(ex_array[0]);
+        
+        // push()
+        // 배열에 ()안의 값을 추가
+        /* ex_array.push(7); 
+
+        var ex_array2 = []
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        ex_array2.push(parseInt(Math.random() * 45 + 1));
+        document.write(ex_array2)
+        */
+
+        // 반복문
+        // for를 사용한 반복문
+        /* for (시작; 끝; 증가) { 
+            반복하려는 코드
+        }
+        */
+        /* for (var i = 0; i < 6; i++) {
+            반복하려는 코드
+        }
+        i++는 반복하려는 코드의 수행이후 i의 증가를 나타냄, 즉 i가 0부터 반복하려는 코드를 실행할 때마다 i가 증가하여, 그 i가 6이 될 때까지 반복한다는 의미
+        */
+        
+        // var lotto = [];
+        // for (var i = 0; i < 6; i++){
+        //     lotto.push(parseInt(Math.random() * 45 + 1))
+        // }
+        // document.write(lotto)
+
+        // 조건문
+        /* if (조건) {
+            참일 경우 실행하려는 코드
+        }
+        */
+        
+        // .indexof(값)
+        // 값이 있으면 해당 위치, 없으면 -1 반환
+
+        // var lotto = [];
+        // for (var i = 0; i < 6; i++){
+        //     var num = parseInt(Math.random() * 45 + 1);
+        //     if (lotto.indexof(num) == -1) {
+        //         lotto.push(num);    
+        //     }
+        // }
+
+        /* while(조건) {
+            반복하려는 코드
+        }
+        */
+        
+        // .length() 
+        // .sort() : 정렬하기
+        // 상기와 같이 정렬하면 1, 11, 2, 22, 3, 33 이런 식으로 정렬된다. 그래서 다음과 같이 정렬한다.
+        // .sort((a,b)=>a-b) : 오름차순 정렬
+        // .sort((a,b)=>b-a) : 내림차순 정렬
+
+        var lotto = []
+        while (lotto.length < 6){
+            var num = parseInt(Math.random() * 45 + 1);
+            if (lotto.indexOf(num) == -1) {
+                lotto.push(num)
+            }
+        }
+        document.write(lotto.sort((a,b)=>a-b));
+
+    </script>
+</body>
+</html> 
