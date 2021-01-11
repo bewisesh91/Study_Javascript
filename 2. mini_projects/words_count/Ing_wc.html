@@ -1,0 +1,40 @@
+<!-- Document Object Model -->
+<!-- javascript는 DOM을 활용하여 html을 조작할 수 있다 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 자기소개서 글자수 계산기 </title>
+</head>
+
+<body>
+    <h1> 자기소개 </h1>
+    <!-- 이벤트와 이벤트 핸들링 -->
+    <!-- 키보드가 눌릴 때마다(onkeydown) words_count()를 실행해라-->
+    <textarea onkeydown="words_count()" id='words'>저는 인성 문제가 없습니다.</textarea>
+    <span id='count'>(0/200)</span>
+
+    <script>
+        function words_count(){
+            // id가 words인 것의 값을 가져와서 content에 저장
+            var content = document.getElementById('words').value;
+            
+            // 문자열의 길이가 200이 넘어가면, content를 0,200까지로 제한하고, 그때의 content를 다시 words의 값으로 변환
+            if (content.length > 200) {
+                content = content.substring(0,200);
+                document.getElementById('words').value = content;
+            }
+            // id가 count인 것의 값을 .innerHTML을 통해 원하는 값으로 수정
+            // .length를 통해 문자열의 길이를 확인할 수 있음
+            document.getElementById('count').innerHTML = '(' + content.length + '/200'
+        };
+        words_count()
+
+    </script>
+</body>
+
+</html>
+
