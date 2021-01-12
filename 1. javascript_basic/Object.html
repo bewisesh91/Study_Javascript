@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 객체((Object)</title>
+</head>
+<body>
+    <script>
+        // 키(속성명) : 값(속성값)으로 구성
+        // 값에는 다양한 자료형이 들어갈 수 있음, ex) 배열, 객체, 함수 등
+        // 특히, 값에 함수가 있을 때 메서드라고 부름
+        var person = {
+            name: 'bewisesh91',
+            age: 30,
+            sayHello: function () {
+                console.log('hello')
+            }
+        }
+        
+        // 객체.키
+        console.log(person.name);
+        person.sayHello();
+
+        // Date 객체 알아보기
+        // 1. Date 객체 생성
+        var now = new Date(); 
+
+        // 2. 연도를 가져오는 메서드 : .getFullYear()
+        console.log(now.getFullYear());
+
+        // 3. 월 정보를 가져오는 메서드 : .getMonth() {0 : 1월, ... , 11 : 12월}
+        console.log(now.getMonth());
+
+        // 4. 일 정보를 가져오는 메서드 : .getDate()
+        console.log(now.getDate());
+
+        // 5. 1970년 1월 1일 00:00:00을 기준으로 흐른 시간을 밀리초로 표시하는 메서드 : .getTime()
+        console.log(now.getTime())
+
+        // 6. 특정 일의 Date 객체 생성
+        var christmas = new Date('2021-12-25');
+        console.log(christmas)
+
+        // 7. 특정 ms의 Date 객체 생성
+        var ms = new Date(1000);
+        // 1000밀리 세컨드가 흐른 시간을 출력
+        console.log(ms)
+        
+
+    </script>
+</body>
+</html>
