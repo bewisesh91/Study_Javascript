@@ -1,0 +1,35 @@
+article{
+    display: flex;
+    /* flex를 주면, 가로로 정렬이 된다. 따라서, 세로로 정렬하려면 flex-direction을 바꾸어준다 */
+    flex-direction: column;
+}
+
+.btn-start{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.btn-answer{
+    width: 850px;
+    margin: 0 auto;
+}
+
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+
+#img {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.share{
+    width: 500px;
+    margin: 0 auto;
+}
