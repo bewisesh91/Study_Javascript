@@ -1,5 +1,6 @@
 body{
     font-family: 'Yeon Sung', cursive;
+    background-color :whitesmoke;
 }
 
 article{
@@ -30,6 +31,12 @@ article{
     margin: 0 auto;
     font-weight: 100;
     font-size: 25px;
+}
+
+.count{
+    font-size: x-large;
+    text-align: right;
+    margin-right: 10px;
 }
 
 .content{
