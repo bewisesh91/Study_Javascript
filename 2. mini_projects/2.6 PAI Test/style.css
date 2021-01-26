@@ -67,9 +67,11 @@ article{
 }
 
 .type_image{
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
+    /*width: 500px;*/
+    /*height: 500px;*/
+    width: 100%;
+    margin: auto;
+    padding: 0px 30px 0px 30px;
 }
 
 .type_title{
@@ -86,5 +88,38 @@ article{
 
 .result{
     display: none;
-    background-color: white;
+    background-color: whitesmoke;
+}
+
+.type-others{
+    margin: 30px auto;
+}
+
+.btn-type-other {
+    display: block;
+    margin: auto 0 auto auto;
+    font-size: 20px;
+    color: black;
+}
+
+.btn-type-other2 {
+    display: block;
+    margin: auto auto auto 0;
+    font-size: 20px;
+    color: black;
+}
+
+.type_others {
+    display: none;
+    margin: auto;
+}
+
+.share {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.share-text{
+    color: goldenrod;
 }

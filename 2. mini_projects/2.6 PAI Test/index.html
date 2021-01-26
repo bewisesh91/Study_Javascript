@@ -38,6 +38,8 @@
         }
     </style>
 
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
 </head>
 
 <body class='container'>
@@ -85,15 +87,27 @@
 
     <!-- ### 결과 화면 ### -->
     <article class="result">
-        <img id = 'type_img' class="type_image mt-5" src="result.png" alt="result">
-        <h3 id="type_title" class="type_title text-center mt-5"> 나는야 합리적인 마크 저커버그 </h2>
-        <h3 id="type_explain" class="type_explain text-center mt-5"> 
-            목적 달성에 방해되는 건 거들떠도 안봄
-            <br>
-            일 잘하는 것? 어렵지 않아요!
-            <br>
-            내 문제는 내가 알아서 해결해
-        </h3>
+        <img id = "type_img" class="type_image mt-5" src="result.png" alt="result">
+<!--        <h3 id="type_title" class="type_title text-center mt-5"> 나는야 합리적인 마크 저커버그 </h3>-->
+<!--        <h3 id="type_explain" class="type_explain text-center mt-5"> -->
+<!--            목적 달성에 방해되는 건 거들떠도 안봄-->
+<!--            <br>-->
+<!--            일 잘하는 것? 어렵지 않아요!-->
+<!--            <br>-->
+<!--            내 문제는 내가 알아서 해결해-->
+<!--        </h3>-->
+
+        <div class="type-others">
+            <div class="share">
+                <button onclick="others()" type="button" class="btn-type-other btn btn-link"> 다른 유형 구경하기 </button>
+                <button onclick="sendLink()" type="button" class="btn-type-other2 btn btn-link"> <span class="share-text">카카오톡</span>으로 테스트 공유하기 </button>
+<!--                <a href="javascript:sendLink()">카카오톡으로 테스트 공유하기</a>-->
+            </div>
+            <div id="type_others" class="type_others">
+                <img id = "type_other1" class="type_image mt-5" src="result.png" alt="result">
+                <img id = "type_other2" class="type_image mt-5" src="result.png" alt="result">
+            </div>
+        </div>
 
         <!-- 결과 공유 툴 삽입 -->
         <!-- Go to www.addthis.com/dashboard to customize your tools -->

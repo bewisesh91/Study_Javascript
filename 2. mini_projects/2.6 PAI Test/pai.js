@@ -10,20 +10,32 @@ function next() {
     if (q_num == 16) {
         // PAI type 결과를 결정하는 로직을 작성한다.
         var PAI_type = '';
+        var type_other1 = '';
+        var type_other2 = '';
         if ($('#R').val()<=2 && $('#O').val()>=3 && $('#E').val()<=2) {
             PAI_type = 'I'
+            type_other1 = 'M'
+            type_other2 = 'A'
         } else if ($('#R').val()>=3 && $('#O').val()<=2 && $('#E').val()>=3) {
             PAI_type = 'A'
+            type_other1 = 'M'
+            type_other2 = 'I'
         } else {
             PAI_type = 'M'
+            type_other2 = 'I'
+            type_other1 = 'A'
         }
 
         $('.question').hide();
         $('.result').show();
 
         $('#type_img').attr('src','img/' + result[PAI_type]['img'])
-        $('#type_title').html(result[PAI_type]['title'])
-        $('#type_explain').html(result[PAI_type]['explain'])
+        // $('#type_title').html(result[PAI_type]['title'])
+        // $('#type_explain').html(result[PAI_type]['explain'])
+
+        $('#type_other1').attr('src','img/' + result[type_other1]['img'])
+        $('#type_other2').attr('src','img/' + result[type_other2]['img'])
+
 
     } else {
         $('#contents').html(questions[q_num]['contents']);
@@ -65,15 +77,37 @@ var questions = {
     10: {"contents": "나는 기존 체계에 쉽게 들어 맞는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
     11: {"contents": "나는 사람들에게 새로운 자극을 주는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
     12: {"contents": "나는 관리하는 것들에 엄격한 질서를 부여하기 좋아하는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
-    13: {"contents": "나는 일반적으로 좋다고 하는 것을 잘 받아들이는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
+    13: {"contents": "나는 일반적으로 좋다고 하는 것을 잘 받아들이는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No":"어렵다"},
     14: {"contents": "나는 아이디어가 넘치는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
     15: {"contents": "나는 꼼꼼한 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
 }
 
 // 결과 리스트
 var result = {
-    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "result1.png"},
-    "A": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 명품시계", "img": "result2.jpg"},
-    "M": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "result3.jpg"},
+    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "result1.jpeg"},
+    "M": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 배꼽시계", "img": "result2.jpeg"},
+    "A": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "result3.jpeg"},
 } 
 
+function others() {
+    let status = $('.type_others').css('display');
+    if (status == 'block') {
+        $('.type_others').hide();
+        $('.btn-type-other').text('다른 유형 구경하기')
+    } else {
+        $('.type_others').show();
+        $('.btn-type-other').text('다른 유형 구경닫기')
+    }
+}
+
+Kakao.init('9d747fb632219a3cd369499cf00cb58a'); // 초기화
+function sendLink() { // 카카오톡 공유하기
+    Kakao.Link.sendDefault({
+        objectType: 'text',
+        text: '나의 시간 활용 유형은?',
+        link: {
+            mobileWebUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
+            webUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
+        },
+    })
+}
