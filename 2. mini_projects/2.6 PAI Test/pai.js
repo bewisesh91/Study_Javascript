@@ -84,9 +84,9 @@ var questions = {
 
 // 결과 리스트
 var result = {
-    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "result1.jpeg"},
-    "M": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 배꼽시계", "img": "result2.jpeg"},
-    "A": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "result3.jpeg"},
+    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "result1.jpg"},
+    "M": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 배꼽시계", "img": "result2.jpg"},
+    "A": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "result3.jpg"},
 } 
 
 function others() {
