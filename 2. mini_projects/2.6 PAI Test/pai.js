@@ -72,14 +72,14 @@ var questions = {
     5: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 규칙에 크게 구애 받지 않고, 유연하게 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
     6: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 사소한 일이라도 기록하고, 미리 계획하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
     7: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 체계적이고, 조직적으로 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
-    8: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 합의된 계획이 있더라도, <br> 일을 진행하며 유연하게 더 나은 방법을 계속 찾는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    8: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 합의된 계획대로 일이 진행되지 않더라도, <br> 불안해하지 않는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
     9: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 업무 스케쥴 관리가 체계적인 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
     10: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 관리하는 것(일, 업무 등)에 질서를 부여하기 좋아하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
     11: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 계획없이 떠나는 여행을 선호하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
     12: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 휴일이나 주말에 쉬는 것도 사전에 계획하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
     13: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 약속된 시간에 늦을 것 같지 않은 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
     14: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 꼼꼼하게 일정을 관리하기 보다는, <br> 대략적인 마감일자를 정해놓고 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
-    15: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 조직과 시스템의 틀을 깨지 않으면서, <br> 효율을 높이는 방법을 찾는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    15: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 정해진 일정 안에서 효율을 높이는 방법을 찾는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
 }
 
 // 결과 리스트
@@ -101,13 +101,28 @@ function others() {
 }
 
 Kakao.init('9d747fb632219a3cd369499cf00cb58a'); // 초기화
-function sendLink() { // 카카오톡 공유하기
+// function sendLink() { // 카카오톡 공유하기
+//     Kakao.Link.sendDefault({
+//         objectType: 'text',
+//         text: '시간 관점 테스트',
+//         link: {
+//             mobileWebUrl: 'https://kakao-pai-test.netlify.app',
+//             webUrl: 'https://kakao-pai-test.netlify.app',
+//         },
+//     })
+// }
+function sendLink() {
     Kakao.Link.sendDefault({
-        objectType: 'text',
-        text: '시간 관점 테스트',
-        link: {
-            mobileWebUrl: 'https://kakao-pai-test.netlify.app',
-            webUrl: 'https://kakao-pai-test.netlify.app',
+        objectType: 'feed',
+        content: {
+            title: '시간 관점 테스트',
+            description: '나를 시계로 표현한다면!?',
+            imageUrl:
+                'https://t1.kakaocdn.net/friends/prod/product/20200714160917279_8809721502280_BW_00.jpg',
+            link: {
+                mobileWebUrl: 'https://kakao-pai-test.netlify.app',
+                webUrl: 'https://kakao-pai-test.netlify.app',
+            },
         },
-    })
+    });
 }
