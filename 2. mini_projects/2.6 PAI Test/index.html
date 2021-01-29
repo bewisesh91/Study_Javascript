@@ -17,30 +17,52 @@
 
     <style>
         @media screen and (max-width:480px){
-            .start-title {
-                font-size: 250%;
+            .start-image {
+                width: 350px;
+                height: 250px;
             }
-            .start-image1 {
-                width: 90%;
+            .start-title1{
+                font-size: 25px;
             }
-            .type_image {
-                width: 100%;
-                padding: 0 0 0 0;
+            .start-title1{
+                font-size: 30px;
             }
             .start-text1 {
-                font-size: 150%;
+                font-size: 20px;
             }
             .start-text2 {
-                font-size: 180%;
+                font-size: 25px;
             }
-            .question {
-                font-size: 90%;
+            .btn-start {
+                width: 300px;
             }
+
+            .content {
+                font-size: 23px;
+                line-height: 40px;
+            }
+            .question-text {
+                font-size: 32px;
+            }
+            .btn-answer {
+                width: 300px;
+                margin: auto;
+            }
+
             .result {
                 background-color: white;
+                margin: 0;
             }
-            .btn-type-other,.btn-type-other2{
-                font-size: 10px;
+            .type_image {
+                width: 350px;
+                margin: 0 0 0 0;
+                padding: 0;
+            }
+            .type-others {
+                margin: 20px 0;
+            }
+            .btn-type-other {
+                margin: 20px 0;
             }
         }
     </style>
@@ -52,14 +74,14 @@
 <body class='container'>
 
     <!-- ### 시작 화면 ### -->
-    <article class="start">
-        <h1 class="start-title text-center"> 시간 활용 유형 검사 </h1>
-        <h6 class="start-title2 text-center"> a.k.a 협업 궁합 Test </h6>
-        <img class="start-image1 " src="img/start-img_1.png">
-        <h4 class="start-text1 mt-3 text-center"> 1분을 1시간처럼 쓰는 너, 1시간을 1분처럼 쓰는 나 </h4>
-        <h2 class="start-text2 text-center"> "우리 함께 일 할 수 있을까...?" </h2>
-        <button type="button" class="btn-start btn btn-warning mt-3 text-center" onclick="start()"> Test Start </button>
-<!--        <img class="start-image2 " src="img/start-img_2.png">-->
+    <article class="start-area">
+        <div class="start-title1 text-center"> 시계 유형으로 살펴보는</div>
+        <div class="start-title2 text-center"> 시간 관점 테스트</div>
+        <img class="start-image " src="img/start.png">
+        <h3 class="start-text1 text-center"> 1분을 1시간처럼 소중히 쓰는 너, <br> 1시간을 1분처럼 분주히 쓰는 나, </h3>
+        <h2 class="start-text2 text-center"> 우리.. 협업 할 수 있을까? </h2>
+        <button type="button" class="btn-start btn btn-warning text-center" onclick="start()"> 테스트 바로가기</button>
+        <!--        <img class="start-image2 " src="img/start-img_2.png">-->
     </article>
 
     <!-- ### 문제 화면 ### -->
@@ -70,7 +92,7 @@
 
         <div id="counts" class="count"> 1 / 15 </div>
         
-        <h2 id="contents" class="content text-center mt-5 mb-5"> 
+        <h2 id="contents" class="content text-center mt-5 mb-5">
             문항이 노출되는 영역입니다.
             <br>
             문항의 갯수는 

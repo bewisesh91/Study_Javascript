@@ -1,6 +1,6 @@
 // Test Start 버튼을 클릭했을 때, article class='start'를 숨기고, article class='question'을 나타냄
 function start(){
-    $('.start').hide();
+    $('.start-area').hide();
     $('.question').show();
     next();
 };
@@ -65,21 +65,21 @@ $("#No").click(function(){
 
 // 문제 리스트
 var questions = {
-    1: {"contents": "나는 규칙을 잘 따르는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
-    2: {"contents": "나는 문제를 남들과 다른 시각으로 바라보는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
-    3: {"contents": "나는 구체적으로 계획된 일을 좋아하는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
-    4: {"contents": "나는 규정을 어기거나 회피 하려는 시도를 절대 하지 않을 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
-    5: {"contents": "나는 독창적인 아이디어가 있는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
-    6: {"contents": "나는 일 하는 방식이 체계적이고 조직적인 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
-    7: {"contents": "나는 정해진 방식에서 벗어나지 않고 일 하는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
-    8: {"contents": "나는 기존 것을 개선하는 활동보다는 새로 만들기를 좋아하는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
-    9: {"contents": "나는 늘 한결같은 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
-    10: {"contents": "나는 기존 체계에 쉽게 들어 맞는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No": "어렵다"},
-    11: {"contents": "나는 사람들에게 새로운 자극을 주는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
-    12: {"contents": "나는 관리하는 것들에 엄격한 질서를 부여하기 좋아하는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
-    13: {"contents": "나는 일반적으로 좋다고 하는 것을 잘 받아들이는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "R", "Yes": "쉽다", "No":"어렵다"},
-    14: {"contents": "나는 아이디어가 넘치는 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "O", "Yes": "쉽다", "No": "어렵다"},
-    15: {"contents": "나는 꼼꼼한 사람으로 <br> 남들에게 장기간, 일관적으로 보이는 것이", "type": "E", "Yes": "쉽다", "No": "어렵다"},
+    1: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 규칙, 규정을 잘 따르는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    2: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 정해진 방식보다 유연성을 잘 발휘하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    3: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 구체적으로 촘촘하게 계획된 일을 좋아하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    4: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 사소한 규정이나, 규칙일지라도 무조건 지키는 사람이라 <br> (ex 휴게 시간을 정확하게 기록한다) </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    5: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 규칙에 크게 구애 받지 않고, 유연하게 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    6: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 사소한 일이라도 기록하고, 미리 계획하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    7: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 체계적이고, 조직적으로 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    8: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 합의된 계획이 있더라도, <br> 일을 진행하며 유연하게 더 나은 방법을 계속 찾는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    9: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 업무 스케쥴 관리가 체계적인 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    10: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 관리하는 것(일, 업무 등)에 질서를 부여하기 좋아하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    11: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 계획없이 떠나는 여행을 선호하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    12: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 휴일이나 주말에 쉬는 것도 사전에 계획하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    13: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 약속된 시간에 늦을 것 같지 않은 사람이라 </span> <br> 말한다 / 피드백한다", "type": "R", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    14: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 꼼꼼하게 일정을 관리하기 보다는, <br> 대략적인 마감일자를 정해놓고 일하는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "O", "Yes": "그런 편이다", "No": "아닌 편이다"},
+    15: {"contents": "나에 대해서 동료들은 <br> <span class='question-text'> 조직과 시스템의 틀을 깨지 않으면서, <br> 효율을 높이는 방법을 찾는 사람이라 </span> <br> 말한다 / 피드백한다", "type": "E", "Yes": "그런 편이다", "No": "아닌 편이다"},
 }
 
 // 결과 리스트
@@ -104,10 +104,10 @@ Kakao.init('9d747fb632219a3cd369499cf00cb58a'); // 초기화
 function sendLink() { // 카카오톡 공유하기
     Kakao.Link.sendDefault({
         objectType: 'text',
-        text: '나의 시간 활용 유형은?',
+        text: '시간 관점 테스트',
         link: {
-            mobileWebUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
-            webUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
+            mobileWebUrl: 'https://kakao-pai-test.netlify.app',
+            webUrl: 'https://kakao-pai-test.netlify.app',
         },
     })
 }

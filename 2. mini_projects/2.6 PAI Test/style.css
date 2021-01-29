@@ -9,38 +9,39 @@ article{
     flex-direction: column;
 }
 
-.start-title{
-    font-weight:600;
-    font-size: 60px;
+.start-title1{
     margin-top: 20px;
+    font-size: 35px;
 }
 
 .start-title2{
-    font-size: 25px;
+    font-size: 55px;
 }
 
-.start-image1 {
+.start-image {
     display: block;
-    margin: auto;
-    width: 350px;
-    height: 350px;
+    margin: auto auto 0 auto;
+    width: 500px;
+    height: 300px;
 }
 
 .start-text1{
-    font-weight:300;
-    font-size: 25px;
-    line-height: normal;
+    margin: 15px;
+    font-size: 20px;
+    line-height: 35px;
+    font-family: "Nanum Gothic" ;
 }
 
 .start-text2{
-    font-weight:300;
-    font-size: 35px;
+    font-weight:bold;
+    font-size: 25px;
     line-height: normal;
+    font-family: "Nanum Gothic" ;
 }
 
 .btn-start{
     width: 350px;
-    margin: 0 auto 0 auto;
+    margin: 15px auto 0 auto;
     font-weight: 150;
     font-size: 25px;
 }
@@ -58,6 +59,11 @@ article{
 
 .content{
     line-height: normal;
+    margin-bottom: 45px;
+}
+
+.question-text {
+    font-size: 50px;
 }
 
 .btn-answer{
@@ -89,6 +95,9 @@ article{
 .result{
     display: none;
     background-color: whitesmoke;
+    margin: auto;
+    width: 800px;
+
 }
 
 .type-others{
