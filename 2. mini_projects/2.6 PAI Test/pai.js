@@ -111,6 +111,7 @@ Kakao.init('9d747fb632219a3cd369499cf00cb58a'); // 초기화
 //         },
 //     })
 // }
+
 function sendLink() {
     Kakao.Link.sendDefault({
         objectType: 'feed',
