@@ -1,0 +1,74 @@
+/* 페이지 상단 */
+.title{
+    background-color: gray;
+}
+
+.title-box{
+    margin: 50px auto;
+    height: 100px;
+    padding: 20px 10px 10px 10px;
+}
+
+.title-box-container{
+}
+
+.title-box-text1{
+}
+
+.title-box-text2{
+}
+
+
+
+/* 메인 */
+
+.main-image{
+}
+
+.main-image-title{
+    text-align: center;
+}
+.main-image-src{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.main-card-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-card-img {
+    border: 1px lightgray solid;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+}
+
+
+/* 디테일 */
+
+#detail-card1, #detail-card2, #detail-card3, #detail-card4, #detail-card5, #detail-card6{
+    display: none;
+}
+
+.detail-card-slide{
+    margin: auto auto 20px auto;
+    width: 700px;
+    height: 500px;
+    border: 1px lightgray solid;
+}
+
+.detail-cards{
+    width: 700px;
+    height: 500px;
+}
+
+
